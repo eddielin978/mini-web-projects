@@ -1,0 +1,26 @@
+@layer layout {
+  body {
+    background-color: hsl(220, 40%, 80%);
+  }
+  .container {
+    max-width: 90%;
+    margin: auto;
+  }
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+@layer components {
+  .project-card {
+    border: 0.1rem solid black;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    img {
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      overflow: hidden;
+    }
+  }
+}
