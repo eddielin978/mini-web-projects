@@ -1,6 +1,6 @@
 # About
 
-This is a collection of some mini web-related projects that I've made. Currently, there's nothing, but I'll improve this when I start making stuff.
+This is a collection of some mini web-related projects that I've made.
 
 ## Projects
 
@@ -8,4 +8,5 @@ This is a collection of some mini web-related projects that I've made. Currently
 
 [View Project](https://eddielin978.github.io/mini-web-projects/state/cookie-clicker/v1/index.html)
 
-- Currently nothing visible and no styling
+- Click on the cookie to increase the number
+- No cookie upgrades yet, but coming soon :D
