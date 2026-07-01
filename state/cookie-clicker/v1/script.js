@@ -1,24 +1,35 @@
+// Cookie Clicker Script
+
+// Query selectors to read DOM
 const perClickUpgradeBtn = document.querySelector(".cpc-upgrade-btn");
 const perSecUpgradeBtn = document.querySelector(".cps-upgrade-btn");
 const cookie = document.querySelector(".cookie");
 const countText = document.querySelector(".cookie-count");
-let perClick = 1;
-let perSec = 2001;
-let cookies = 0;
-let playing = true;
-let rateLimit = 1000 / perSec <= 4 ? true : false;
+
+// Variable declaration
+let perClick = 1; // Cookies per click (eventually upgradable; starts at 1)
+let perSec = 30200; // Cookies per second (eventually upgradable; starts at 0)
+let cookies = 0; // Amount of cookies (increased by perClick and perSec; starts at 0)
+let rateLimit = 1000 / perSec <= 4 ? true : false; // setInterval() has a rate-limit of 4ms (250 iterations per second)
+
+// Updates the span that shows how many cookies the user has
 function updateCount() {
   countText.textContent = `Cookies: ${cookies.toFixed(0)}`;
 }
+updateCount();
+
+// Increments cookie amount when the cookie is clicked
+cookie.addEventListener("click", () => {
+  cookies += perClick; // If perClick is upgraded, cookies scale faster
+  updateCount(); // Updates the cookie-count span (see above)
+});
+
+// Cookies per second interval
+// setInterval() has a rate-limit of 4ms (250 iterations per second)
 const cpsInterval = setInterval(
   () => {
     rateLimit ? (cookies += perSec / 250) : (cookies += 1);
-    updateCount();
+    updateCount(); // Updates the cookie-count span (see above)
   },
   rateLimit ? 4 : 1000 / perSec,
 );
-updateCount();
-cookie.addEventListener("click", () => {
-  cookies += perClick;
-  updateCount();
-});

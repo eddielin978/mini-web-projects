@@ -5,7 +5,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Kavoon";
+    font-family: "Syne Mono";
+    /* Mono-space font so cookie label doesn't keep vibrating */
   }
 }
 
@@ -59,6 +60,12 @@
   main {
     flex: 6;
   }
+  header {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .container {
     max-width: 70%;
     display: flex;
@@ -66,21 +73,15 @@
     margin: auto;
   }
   .cookie-area,
-  .upgrade-area {
+  .building-area {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   header {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  header.stage-one {
     background-color: hsl(0, 0%, 20%);
   }
-  main.stage-one {
+  main {
     background-color: hsl(0, 0%, 60%);
   }
 }

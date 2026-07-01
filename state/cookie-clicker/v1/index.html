@@ -1,39 +1,51 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Boilerplate -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cookie Clicker V1</title>
+    <!-- Links CSS -->
     <link rel="stylesheet" href="styles.css" />
+    <!-- Fonts (Kavoon and Syne Mono) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kavoon&family=Syne+Mono&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header class="stage-one">
+    <!-- Dark grey header -->
+    <header>
       <h1>Cookie Clicker V1</h1>
     </header>
     <hr />
-    <main class="stage-one">
+    <!-- Main grey area -->
+    <main>
+      <!-- Container to keep things central -->
       <section class="container">
+        <!-- Section where the cookie and cookie count are (left side) -->
         <section class="cookie-area">
           <span class="cookie-count"></span>
           <div class="cookie"></div>
         </section>
-        <section class="upgrade-area">
-          <section class="upgrade">
-            <section class="upgrade-info">
-              <span class="upgrade-name"></span>
-              <span class="upgrade-count"></span>
+        <!-- Section where the buildings are (right side) -->
+        <section class="building-area">
+          <section class="building">
+            <section class="building-info">
+              <span class="building-name"></span>
+              <span class="building-count"></span>
             </section>
-            <div class="upgrade-btn cpc-upgrade-btn"></div>
+            <div class="building-btn cpc-building-btn"></div>
           </section>
-          <section class="upgrade">
-            <section class="upgrade-info">
-              <span class="upgrade-name"></span>
-              <span class="upgrade-count"></span>
+          <section class="building">
+            <section class="building-info">
+              <span class="building-name"></span>
+              <span class="building-count"></span>
             </section>
-            <div class="upgrade-btn cps-upgrade-btn"></div>
+            <div class="building-btn cps-building-btn"></div>
           </section>
         </section>
       </section>
