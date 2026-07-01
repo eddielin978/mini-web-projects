@@ -7,6 +7,7 @@
     box-sizing: border-box;
   }
 }
+
 @layer base {
   h1,
   h2,
@@ -45,5 +46,31 @@
   li {
     line-height: 1.6;
     font-size: clamp(1rem, 2.5vw, 1.1rem);
+  }
+}
+
+@layer layout {
+  .container {
+    max-width: 90%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+  .cookie-area,
+  .upgrade-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+}
+
+@layer components {
+  .cookie {
+    width: 20rem;
+    height: 20rem;
+    background-color: hsl(45, 60%, 60%);
+    margin-top: 2rem;
+    border-radius: 50%;
   }
 }
