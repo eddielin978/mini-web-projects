@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Kavoon";
   }
 }
 
@@ -50,8 +51,16 @@
 }
 
 @layer layout {
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  main {
+    flex: 6;
+  }
   .container {
-    max-width: 90%;
+    max-width: 70%;
     display: flex;
     flex-direction: row;
     margin: auto;
@@ -61,7 +70,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  header {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header.stage-one {
+    background-color: hsl(0, 0%, 20%);
+  }
+  main.stage-one {
+    background-color: hsl(0, 0%, 60%);
   }
 }
 
@@ -69,8 +89,21 @@
   .cookie {
     width: 20rem;
     height: 20rem;
-    background-color: hsl(45, 60%, 60%);
+    background-color: hsl(40, 50%, 50%);
     margin-top: 2rem;
     border-radius: 50%;
+    border: 0.2rem solid hsl(35, 40%, 40%);
+  }
+  .cookie-count {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+  h1 {
+    margin: 0 0 0 2rem;
+    color: hsl(0, 0%, 80%);
+    text-align: center;
+  }
+  hr {
+    border: 0.1rem solid black;
   }
 }
