@@ -17,7 +17,7 @@ let perSec = 0; // Cookies per second (eventually upgradable; starts at 0)
 let cookies = 0; // Amount of cookies (increased by perClick and perSec; starts at 0)
 let ticks = 5;
 let rateLimitVal = 200; // milliseconds of interval
-let rateLimit = perSec === 0 ? false : perSec > ticks ? true : false;
+let rateLimit = perSec !== 0 && perSec > ticks;
 let cpcBuildings = 0;
 let cpsBuildings = 0;
 let initialCost = 10;
@@ -94,6 +94,7 @@ function updateStat(buildingType = "cpc" || "cps") {
 }
 
 function updateCpsInterval() {
+  rateLimit = perSec !== 0 && perSec > ticks;
   clearInterval(cpsInterval);
   cpsInterval = setInterval(
     () => {
