@@ -14,7 +14,9 @@ const cpsBuildingBtn = document.querySelector(".cps-building-btn");
 let perClick = 1; // Cookies per click (eventually upgradable; starts at 1)
 let perSec = 0; // Cookies per second (eventually upgradable; starts at 0)
 let cookies = 0; // Amount of cookies (increased by perClick and perSec; starts at 0)
-let rateLimit = perSec === 0 ? false : 1000 / perSec <= 4 ? true : false; // setInterval() has a rate-limit of 4ms (250 iterations per second)
+let ticks = 5;
+let rateLimitVal = 200; // milliseconds of interval
+let rateLimit = perSec === 0 ? false : perSec > ticks ? true : false;
 let cpcBuildings = 0;
 let cpsBuildings = 0;
 let initialCost = 10;
@@ -37,10 +39,10 @@ cookie.addEventListener("click", () => {
 // setInterval() has a rate-limit of 4ms (250 iterations per second)
 const cpsInterval = setInterval(
   () => {
-    rateLimit ? (cookies += perSec / 250) : (cookies += 1);
+    rateLimit ? (cookies += perSec / ticks) : cookies++;
     updateCount(); // Updates the cookie-count span (see above)
   },
-  rateLimit ? 4 : 1000 / perSec,
+  rateLimit ? rateLimitVal : Math.floor(1000 / perSec),
 );
 if (perSec === 0) clearInterval(cpsInterval);
 
@@ -70,8 +72,20 @@ function updateStat(buildingType = "cpc" || "cps") {
     perClick += 3 + Math.floor(cpcBuildingCost / 40);
   } else {
     perSec++;
+    updateCpsInterval();
   }
   updateCost(buildingType);
+}
+
+function updateCpsInterval() {
+  clearInterval(cpsInterval);
+  cpsInterval = setInterval(
+    () => {
+      rateLimit ? (cookies += perSec / ticks) : cookies++;
+      updateCount(); // Updates the cookie-count span (see above)
+    },
+    rateLimit ? rateLimitVal : Math.floor(1000 / perSec),
+  );
 }
 
 cpcBuildingBtn.addEventListener("click", () => {
