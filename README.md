@@ -9,4 +9,10 @@ This is a collection of some mini web-related projects that I've made.
 [View Project](https://eddielin978.github.io/mini-web-projects/state/cookie-clicker/v1/index.html)
 
 - Click on the cookie to increase the number
-- No cookie upgrades yet, but coming soon :D
+- Buy upgrades to increase click power and auto-generate cookies
+
+### Local Storage Experiment V1
+
+[View Project](https://eddielin978.github.io/mini-web-projects/state/localstorage/localstorage.html)
+
+- Set your name and refresh the page. Your name will still be there!
