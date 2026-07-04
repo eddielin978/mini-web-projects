@@ -5,6 +5,7 @@ const perClickUpgradeBtn = document.querySelector(".cpc-upgrade-btn");
 const perSecUpgradeBtn = document.querySelector(".cps-upgrade-btn");
 const cookie = document.querySelector(".cookie");
 const countText = document.querySelector(".cookie-count");
+const cpsDisplay = document.querySelector(".cps-display");
 const cpcBuildingCountText = document.querySelector(".cpc-building .building-count");
 const cpsBuildingCountText = document.querySelector(".cps-building .building-count");
 const cpcBuildingBtn = document.querySelector(".cpc-building-btn");
@@ -28,6 +29,11 @@ function updateCount() {
   countText.textContent = `Cookies: ${cookies.toFixed(0)}`;
 }
 updateCount();
+
+function updateCpsDisplay() {
+  cpsDisplay.textContent = `per second: ${perSec}`;
+}
+updateCpsDisplay();
 
 // Increments cookie amount when the cookie is clicked
 cookie.addEventListener("click", () => {
@@ -81,6 +87,7 @@ function updateStat(buildingType = "cpc" || "cps") {
   } else {
     perSec += 1 + Math.floor(cpsBuildingCost / 160);
     updateCpsInterval();
+    updateCpsDisplay();
   }
   updateCost(buildingType);
   updateBuildingAmounts(buildingType);
