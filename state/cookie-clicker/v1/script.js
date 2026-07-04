@@ -74,18 +74,18 @@ updateCostDisplay();
 
 function updateCost(buildingType = "cpc" || "cps") {
   if (buildingType === "cpc") {
-    cpcBuildingCost *= 2;
+    cpcBuildingCost = Math.floor(cpcBuildingCost * 1.6);
   } else {
-    cpsBuildingCost *= 2;
+    cpsBuildingCost = Math.floor(cpsBuildingCost * 1.6);
   }
   updateCostDisplay();
 }
 
 function updateStat(buildingType = "cpc" || "cps") {
   if (buildingType === "cpc") {
-    perClick += 1 + Math.floor(cpcBuildingCost / 80);
+    perClick += 1 + Math.floor(cpcBuildingCost / 100);
   } else {
-    perSec += 1 + Math.floor(cpsBuildingCost / 160);
+    perSec += 1 + Math.floor(cpsBuildingCost / 200);
     updateCpsInterval();
     updateCpsDisplay();
   }
@@ -104,9 +104,20 @@ function updateCpsInterval() {
   );
 }
 
+const reduceCookies = (num) => {
+  cookies -= num;
+  updateCount();
+};
+
 cpcBuildingBtn.addEventListener("click", () => {
-  updateStat("cpc");
+  if (cookies >= cpcBuildingCost) {
+    reduceCookies(cpcBuildingCost);
+    updateStat("cpc");
+  }
 });
 cpsBuildingBtn.addEventListener("click", () => {
-  updateStat("cps");
+  if (cookies >= cpsBuildingCost) {
+    reduceCookies(cpsBuildingCost);
+    updateStat("cps");
+  }
 });
