@@ -45,11 +45,20 @@ let cpsInterval = setInterval(
 );
 if (perSec === 0) clearInterval(cpsInterval);
 
-function updateBuildingCount() {
+function updateBuildingAmountDisplay() {
   cpcBuildingCountText.textContent = `Amount: ${cpcBuildings}`;
   cpsBuildingCountText.textContent = `Amount: ${cpsBuildings}`;
 }
-updateBuildingCount();
+updateBuildingAmountDisplay();
+
+function updateBuildingAmounts(buildingType = "cpc" || "cps") {
+  if (buildingType === "cpc") {
+    cpcBuildings++;
+  } else {
+    cpsBuildings++;
+  }
+  updateBuildingAmountDisplay();
+}
 
 function updateCostDisplay() {
   cpcBuildingBtn.textContent = `Cost: ${cpcBuildingCost} cookies`;
@@ -74,6 +83,7 @@ function updateStat(buildingType = "cpc" || "cps") {
     updateCpsInterval();
   }
   updateCost(buildingType);
+  updateBuildingAmounts(buildingType);
 }
 
 function updateCpsInterval() {
