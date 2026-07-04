@@ -36,8 +36,7 @@ cookie.addEventListener("click", () => {
 });
 
 // Cookies per second interval
-// setInterval() has a rate-limit of 4ms (250 iterations per second)
-const cpsInterval = setInterval(
+let cpsInterval = setInterval(
   () => {
     rateLimit ? (cookies += perSec / ticks) : cookies++;
     updateCount(); // Updates the cookie-count span (see above)
@@ -60,18 +59,18 @@ updateCostDisplay();
 
 function updateCost(buildingType = "cpc" || "cps") {
   if (buildingType === "cpc") {
-    cpcBuildingCost *= 4;
+    cpcBuildingCost *= 2;
   } else {
-    cpsBuildingCost *= 4;
+    cpsBuildingCost *= 2;
   }
   updateCostDisplay();
 }
 
 function updateStat(buildingType = "cpc" || "cps") {
   if (buildingType === "cpc") {
-    perClick += 3 + Math.floor(cpcBuildingCost / 40);
+    perClick += 1 + Math.floor(cpcBuildingCost / 80);
   } else {
-    perSec++;
+    perSec += 1 + Math.floor(cpsBuildingCost / 160);
     updateCpsInterval();
   }
   updateCost(buildingType);
