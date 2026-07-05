@@ -1,0 +1,93 @@
+@layer reset, base, layout, components, utilities;
+
+@layer reset {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Syne Mono";
+  }
+}
+@layer base {
+  h1,
+  h2,
+  h3,
+  a,
+  span,
+  p,
+  li {
+    color: var(--dark);
+  }
+  h1 {
+    margin-top: clamp(0.8rem, 6vh, 1.5rem);
+    margin-bottom: clamp(0.8rem, 6vh, 1.5rem);
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    line-height: 1.2;
+  }
+  h2 {
+    margin-top: clamp(0.3rem, 2.5vh, 0.6rem);
+    margin-bottom: clamp(0.5rem, 5vh, 1.2rem);
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    line-height: 1.2;
+  }
+  h3 {
+    margin-top: clamp(0.3rem, 2.5vh, 0.6rem);
+    margin-bottom: clamp(0.3rem, 2.5vh, 0.6rem);
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    line-height: 1.2;
+  }
+  a,
+  span {
+    display: inline-block;
+    line-height: 1.2;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+  }
+  p,
+  li {
+    line-height: 1.6;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+  }
+}
+@layer layout {
+  body {
+    background-color: hsl(220, 40%, 80%);
+  }
+  .container {
+    max-width: 90%;
+    margin: auto;
+  }
+  .version-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+@layer components {
+  .version-card {
+    border: 0.5rem solid black;
+    border-radius: 1rem;
+    padding: 2.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(220, 30%, 60%);
+    img {
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      overflow: hidden;
+    }
+    .version-title {
+      font-size: 2rem;
+    }
+  }
+  header h1 {
+    text-align: center;
+    background-color: hsl(220, 20%, 20%);
+    color: hsl(0, 0%, 90%);
+    padding: 2rem;
+    margin: 0 0 2rem;
+  }
+}
