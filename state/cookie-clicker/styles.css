@@ -50,16 +50,27 @@
 }
 @layer layout {
   body {
-    background-color: hsl(220, 40%, 80%);
+    background-color: hsl(50, 50%, 70%);
+    display: flex;
+    flex-direction: column;
   }
   .container {
     max-width: 90%;
     margin: auto;
   }
+  header {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(35, 15%, 15%);
+    padding: 0.5rem 5%;
+    align-items: center;
+    gap: 5rem;
+    margin-bottom: 2rem;
+  }
   .version-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 2rem;
     a {
       text-decoration: none;
     }
@@ -67,17 +78,28 @@
 }
 @layer components {
   .version-card {
-    border: 0.5rem solid black;
+    border: 0.5rem solid hsl(35, 15%, 15%);
     border-radius: 1rem;
-    padding: 2.5rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: hsl(220, 30%, 60%);
-    img {
-      aspect-ratio: 1/1;
-      object-fit: cover;
+    align-content: center;
+    text-align: center;
+    background-color: hsl(50, 30%, 50%);
+    height: 100%;
+    overflow: hidden;
+    .version-img-div {
+      width: 100%;
       overflow: hidden;
+    }
+    .version-img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.3s ease;
+      transform-origin: 57% 55%;
+      &:hover {
+        transform: scale(1.4);
+      }
     }
     .version-title {
       font-size: 2rem;
@@ -85,9 +107,15 @@
   }
   header h1 {
     text-align: center;
-    background-color: hsl(220, 20%, 20%);
-    color: hsl(0, 0%, 90%);
-    padding: 2rem;
-    margin: 0 0 2rem;
+    color: hsl(50, 50%, 70%);
+  }
+  header .back-button {
+    text-decoration: none;
+    background-color: hsl(50, 50%, 70%);
+    color: hsl(35, 15%, 15%);
+    border: 0.2rem solid hsl(50, 30%, 50%);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
   }
 }
