@@ -77,14 +77,30 @@
     background-color: hsl(220, 30%, 60%);
     height: 100%;
     overflow: hidden;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+    box-shadow: -0.1rem 0.1rem 0.2rem hsl(220, 20%, 20%);
+    .project-img-div {
+      width: 100%;
+      overflow: hidden;
+    }
     .project-img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      transition: transform 0.3s ease;
+      transform-origin: 57% 55%;
+      &:hover {
+        transform: scale(1.4);
+      }
     }
     .project-title {
       font-size: 2rem;
       margin: 1rem 0;
+    }
+    &:hover {
+      transform: translateY(-0.1rem);
+      box-shadow: -0.1rem 0.1rem 0.4rem hsl(220, 20%, 20%);
     }
   }
   header h1 {
