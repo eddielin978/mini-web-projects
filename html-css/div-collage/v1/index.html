@@ -9,9 +9,11 @@
   <body>
     <h1>Div Collage</h1>
     <section class="button-row">
-      <button>Uniform grid</button><button>Mixed rectangles</button><button>Freeform</button>
+      <button class="active-btn" type="button" data-target="uniform-grid">Uniform grid</button
+      ><button type="button" data-target="mixed-rectangles">Mixed rectangles</button
+      ><button type="button" data-target="freeform-grid">Freeform</button>
     </section>
-    <section class="uniform-grid">
+    <section class="uniform-grid grid">
       <div class="div red-div"></div>
       <div class="div orange-div"></div>
       <div class="div yellow-div"></div>
@@ -23,7 +25,7 @@
       <div class="div gray-div"></div>
       <div class="div brown-div"></div>
     </section>
-    <section class="mixed-rectangles">
+    <section class="mixed-rectangles grid hidden">
       <div class="div red-div"></div>
       <div class="div orange-div"></div>
       <div class="div yellow-div"></div>
@@ -35,7 +37,7 @@
       <div class="div gray-div"></div>
       <div class="div brown-div"></div>
     </section>
-    <section class="freeform-grid">
+    <section class="freeform-grid grid hidden">
       <div class="div red-div"></div>
       <div class="div orange-div"></div>
       <div class="div yellow-div"></div>

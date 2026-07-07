@@ -70,7 +70,7 @@
     position: relative;
     width: 32rem;
     height: 25rem;
-    border: 0.5rem solid hsl(0, 0%, 50%);
+    border: 0.25rem solid hsl(0, 0%, 85%);
     .div {
       position: absolute;
       border: 0.25rem solid hsl(0, 0%, 95%);
