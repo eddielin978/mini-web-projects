@@ -27,7 +27,8 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
   }
   .uniform-grid,
   .mixed-rectangles {
@@ -67,7 +68,7 @@
   }
   .freeform-grid {
     position: relative;
-    width: 35rem;
+    width: 32rem;
     height: 25rem;
     border: 0.5rem solid hsl(0, 0%, 50%);
     .div {
@@ -109,14 +110,35 @@
       left: 12rem;
       width: 10rem;
       height: 8rem;
+      z-index: 2;
     }
     .pink-div {
+      bottom: 2rem;
+      left: 14rem;
+      width: 7rem;
+      height: 10rem;
+      z-index: 2;
     }
     .black-div {
+      top: 2rem;
+      left: 18rem;
+      width: 10rem;
+      height: 6rem;
+      z-index: 2;
     }
     .gray-div {
+      left: 19rem;
+      bottom: 6rem;
+      width: 8rem;
+      height: 4rem;
+      z-index: 2;
     }
     .brown-div {
+      left: 19rem;
+      bottom: 9rem;
+      width: 10rem;
+      height: 8rem;
+      z-index: 1;
     }
   }
 }
@@ -151,5 +173,20 @@
   }
   .brown-div {
     background-color: hsl(30, 40%, 40%);
+  }
+  .button-row button {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .hidden {
+    display: none;
+  }
+  .active-btn {
+    background-color: hsl(0, 80%, 80%);
   }
 }
