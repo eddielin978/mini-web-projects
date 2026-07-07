@@ -1,0 +1,78 @@
+@layer reset, base, layout, components, utilities;
+
+@layer reset {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS", "Comic Sans", "Apple Chancery", cursive;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@layer base {
+  h1 {
+    margin-top: 1rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@layer layout {
+  .button-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .uniform-grid,
+  .mixed-rectangles,
+  .freeform-grid {
+    display: grid;
+    gap: 0.25rem;
+    background-color: hsl(0, 0%, 95%);
+    border: 0.25rem solid hsl(0, 0%, 95%);
+  }
+  .uniform-grid {
+    grid-template-columns: repeat(5, 10rem);
+    grid-template-rows: repeat(3, 10rem);
+    grid-auto-flow: dense;
+  }
+}
+
+@layer components {
+  .red-div {
+    background-color: hsl(0, 80%, 80%);
+  }
+  .orange-div {
+    background-color: hsl(30, 80%, 80%);
+  }
+  .yellow-div {
+    background-color: hsl(50, 80%, 80%);
+  }
+  .green-div {
+    background-color: hsl(120, 80%, 80%);
+  }
+  .blue-div {
+    background-color: hsl(200, 80%, 80%);
+  }
+  .purple-div {
+    background-color: hsl(250, 80%, 80%);
+  }
+  .pink-div {
+    background-color: hsl(300, 80%, 80%);
+  }
+  .black-div {
+    background-color: hsl(0, 0%, 20%);
+  }
+  .gray-div {
+    background-color: hsl(0, 0%, 50%);
+  }
+  .brown-div {
+    background-color: hsl(30, 40%, 40%);
+  }
+}
