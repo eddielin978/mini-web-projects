@@ -12,5 +12,5 @@ export default defineConfig({
       },
     }),
   ],
-  base: "/vite-test/",
+  base: "/mini-web-projects/",
 });
