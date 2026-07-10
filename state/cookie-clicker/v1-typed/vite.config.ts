@@ -13,4 +13,7 @@ export default defineConfig({
     }),
   ],
   base: "/mini-web-projects/",
+  build: {
+    outDir: "public-dist",
+  },
 });
