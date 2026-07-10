@@ -1,0 +1,23 @@
+{
+  "name": "v1-typed",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.7.0",
+    "globals": "^17.7.0",
+    "jiti": "^2.7.0",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.63.0",
+    "vite": "^8.1.1"
+  },
+  "dependencies": {
+    "vite-plugin-checker": "^0.14.4"
+  }
+}
