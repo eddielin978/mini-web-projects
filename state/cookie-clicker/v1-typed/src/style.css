@@ -1,3 +1,142 @@
-body {
-  background-color: azure;
+@layer reset, base, layout, components, utilities;
+
+@layer reset {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Syne Mono";
+    /* Mono-space font so cookie label doesn't keep vibrating */
+  }
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  a,
+  span,
+  p,
+  li {
+    color: var(--dark);
+  }
+  h1 {
+    margin-top: clamp(0.8rem, 6vh, 1.5rem);
+    margin-bottom: clamp(0.8rem, 6vh, 1.5rem);
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    line-height: 1.2;
+  }
+  h2 {
+    margin-top: clamp(0.3rem, 2.5vh, 0.6rem);
+    margin-bottom: clamp(0.5rem, 5vh, 1.2rem);
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    line-height: 1.2;
+  }
+  h3 {
+    margin-top: clamp(0.3rem, 2.5vh, 0.6rem);
+    margin-bottom: clamp(0.3rem, 2.5vh, 0.6rem);
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    line-height: 1.2;
+  }
+  a,
+  span {
+    display: inline-block;
+    line-height: 1.2;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+  }
+  p,
+  li {
+    line-height: 1.6;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+  }
+}
+
+@layer layout {
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  main {
+    flex: 6;
+  }
+  header {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    max-width: 70%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+  .cookie-area,
+  .building-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+  .building-area {
+    justify-content: space-evenly;
+    align-items: flex-start;
+    & > * {
+      border: 2px solid black;
+    }
+  }
+  header {
+    background-color: hsl(0, 0%, 20%);
+  }
+  main {
+    background-color: hsl(0, 0%, 60%);
+  }
+}
+
+@layer components {
+  .cookie {
+    width: 20rem;
+    height: 20rem;
+    background-color: hsl(40, 50%, 50%);
+    margin-top: 2rem;
+    border-radius: 50%;
+    border: 0.2rem solid hsl(35, 40%, 40%);
+    cursor: pointer;
+  }
+  .cookie-count {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+  .cps-display {
+    font-size: 1.5rem;
+  }
+  h1 {
+    margin: 0 0 0 2rem;
+    color: hsl(0, 0%, 80%);
+    text-align: center;
+  }
+  hr {
+    border: 0.1rem solid black;
+  }
+  .building {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .building-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+  .building-btn {
+    flex: 1;
+    padding: 0.5rem;
+    border: 2px solid blue;
+    user-select: none;
+    cursor: pointer;
+  }
 }

@@ -1,13 +1,53 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Boilerplate -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cookie Clicker TS V1</title>
+    <!-- Fonts (Kavoon and Syne Mono) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kavoon&family=Syne+Mono&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div id="container"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <!-- Dark grey header -->
+    <header>
+      <h1>Cookie Clicker V1 (Typescript)</h1>
+    </header>
+    <hr />
+    <!-- Main grey area -->
+    <main>
+      <!-- Container to keep things central -->
+      <section class="container">
+        <!-- Section where the cookie and cookie count are (left side) -->
+        <section class="cookie-area">
+          <span class="cookie-count"></span>
+          <span class="cps-display"></span>
+          <div class="cookie"></div>
+        </section>
+        <!-- Section where the buildings are (right side) -->
+        <section class="building-area">
+          <section class="building cpc-building">
+            <section class="building-info">
+              <span class="building-name">Click Strengthener</span>
+              <span class="building-count"></span>
+            </section>
+            <div class="building-btn cpc-building-btn"></div>
+          </section>
+          <section class="building cps-building">
+            <section class="building-info">
+              <span class="building-name">Auto-clicker</span>
+              <span class="building-count"></span>
+            </section>
+            <div class="building-btn cps-building-btn"></div>
+          </section>
+        </section>
+      </section>
+    </main>
+    <script type="module" src="./src/main.ts"></script>
   </body>
 </html>
