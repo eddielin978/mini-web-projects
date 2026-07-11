@@ -82,12 +82,14 @@
       box-shadow 0.2s ease;
     box-shadow: -0.1rem 0.1rem 0.2rem hsl(220, 20%, 20%);
     .project-img-div {
+      flex: 1;
       width: 100%;
       overflow: hidden;
     }
     .project-img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
       transition: transform 0.3s ease;
       transform-origin: 57% 55%;
       &:hover {
@@ -101,6 +103,10 @@
     &:hover {
       transform: translateY(-0.1rem);
       box-shadow: -0.1rem 0.1rem 0.4rem hsl(220, 20%, 20%);
+    }
+    &.local-storage .project-img {
+      object-position: 0% 0%;
+      transform-origin: 0% 0%;
     }
   }
   header h1 {
