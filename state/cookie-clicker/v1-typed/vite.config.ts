@@ -12,7 +12,7 @@ export default defineConfig({
       },
     }),
   ],
-  base: "/mini-web-projects/",
+  base: "/mini-web-projects/state/cookie-clicker/v1-typed/public-dist/",
   build: {
     outDir: "public-dist",
   },
