@@ -1,0 +1,39 @@
+@layer reset, base, layout, components, utilities;
+
+@layer reset {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: azure;
+  }
+}
+
+@layer base {
+  h1 {
+    margin: 1rem 0;
+  }
+}
+
+@layer layout {
+  .container {
+    max-width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .button-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    .btn {
+      padding: 0.5rem;
+      border: 0.2rem solid hsl(0, 0%, 20%);
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+  }
+}
