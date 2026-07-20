@@ -17,6 +17,18 @@
     button {
       align-self: center;
     }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      .pair {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
   }
   .user-list {
     display: flex;
