@@ -3,8 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>User Info Form</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body></body>
+  <body>
+    <main>
+      <section class="page">
+        <form action="" class="form">
+          <div class="form-group">
+            <label for="user-name">Name: </label>
+            <input type="text" id="user-name" name="name" />
+            <span class="error-text"></span>
+          </div>
+          <div class="form-group">
+            <label for="user-email">Email: </label>
+            <input type="text" id="user-email" name="email" />
+            <span class="error-text"></span>
+          </div>
+          <div class="form-group">
+            <label for="user-phone">Phone Number: </label>
+            <input type="text" id="user-phone" name="phone-number" /><span class="error-text">
+            </span>
+          </div>
+          <button type="submit">Add User</button>
+        </form>
+      </section>
+    </main>
+  </body>
 </html>
