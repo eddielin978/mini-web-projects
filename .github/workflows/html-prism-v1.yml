@@ -3,7 +3,6 @@ name: Deploy Subfolder Vite App to Pages
 on:
   push:
     branches: ["main"]
-    # Optional: Only trigger when files inside this specific subfolder change
     paths:
       - "html-css/prism-js/github-actions/v1/**"
   workflow_dispatch:
