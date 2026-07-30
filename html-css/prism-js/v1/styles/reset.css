@@ -5,5 +5,5 @@
 }
 body {
   height: 100dvh;
-  background-color: blue;
+  background-color: hsl(200, 60%, 60%);
 }
