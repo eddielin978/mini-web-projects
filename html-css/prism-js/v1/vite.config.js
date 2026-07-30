@@ -17,7 +17,7 @@ export default defineConfig({
       css: true,
     }),
   ],
-  base: "/mini-web-projects/html-css/prism-js/v1/dist/",
+  base: "/mini-web-projects/html-css/prism-js/v1/",
   build: {
     outDir: "dist",
   },
