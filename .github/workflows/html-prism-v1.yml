@@ -37,5 +37,6 @@ jobs:
         with:
           commit_message: "automated production build [skip ci]"
           file_pattern: "html-css/prism-js/v1/dist/**"
+          add_options: "--force"
           skip_dirty_check: false
           disable_globbing: false
