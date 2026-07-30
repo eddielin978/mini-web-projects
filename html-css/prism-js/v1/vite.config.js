@@ -17,5 +17,5 @@ export default defineConfig({
       css: true,
     }),
   ],
-  base: "/mini-web-projects/",
+  base: "/mini-web-projects/html-css/prism-js/v1/",
 });
