@@ -1,23 +1,57 @@
+name: Deploy Subfolder Vite App to Pages
+
 on:
   push:
-    branches: ["main"] # Triggers on pushes to the main branch
-  workflow_dispatch: # Allows manual triggers from the Actions tab
+    branches: ["main"]
+    # Optional: Only trigger when files inside this specific subfolder change
+    paths:
+      - "html-css/prism-js/github-actions/v1/**"
+  workflow_dispatch:
 
-# Set permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
 jobs:
-  build:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Run Shared Local Setup
-        uses: ./html-css/prism-js/github-actions/v1 # Path to your subfolder action
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: "npm"
+          # Fixed: Pointing forward/downward into the workspace repo structure
+          cache-dependency-path: "html-css/prism-js/github-actions/v1/package-lock.json"
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: html-css/prism-js/github-actions/v1
+
+      - name: Build project
+        run: npm run build
+        working-directory: html-css/prism-js/github-actions/v1
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Fixed: Grabbing the compiled asset folder from inside the subfolder
+          path: "html-css/prism-js/github-actions/v1/dist"
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
