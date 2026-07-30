@@ -1,17 +1,19 @@
-name: Deploy Vite Subfolder
+name: Compile Monorepo Vite Apps
 
 on:
   push:
     branches: ["main"]
     paths:
       - "html-css/prism-js/v1/**"
+      # Exclude the dist folder itself from triggering an infinite loop
+      - "!html-css/prism-js/v1/dist/**"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -30,9 +32,8 @@ jobs:
           npm run build
         working-directory: html-css/prism-js/v1
 
-      - name: Deploy Subfolder to gh-pages Branch
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Commit and Push Built Files
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          branch: gh-pages
-          folder: html-css/prism-js/v1/dist
-          target-folder: html-css/prism-js/v1 # Places bundle inside the target layout path
+          commit_message: "automated production build [skip ci]"
+          file_pattern: "html-css/prism-js/v1/dist/**"
