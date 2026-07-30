@@ -4,7 +4,7 @@ on:
   push:
     branches: ["main"]
     paths:
-      - "html-css/prism-js/github-actions/v1/**"
+      - "html-css/prism-js/v1/**"
   workflow_dispatch:
 
 permissions:
@@ -31,15 +31,15 @@ jobs:
         with:
           node-version: lts/*
           cache: "npm"
-          cache-dependency-path: "html-css/prism-js/github-actions/v1/package-lock.json"
+          cache-dependency-path: "html-css/prism-js/v1/package-lock.json"
 
       - name: Install dependencies
         run: npm ci
-        working-directory: html-css/prism-js/github-actions/v1
+        working-directory: html-css/prism-js/v1
 
       - name: Build project
         run: npm run build
-        working-directory: html-css/prism-js/github-actions/v1
+        working-directory: html-css/prism-js/v1
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -48,7 +48,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Fixed: Grabbing the compiled asset folder from inside the subfolder
-          path: "html-css/prism-js/github-actions/v1/dist"
+          path: "html-css/prism-js/v1/dist"
 
       - name: Deploy to GitHub Pages
         id: deployment
