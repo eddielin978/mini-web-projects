@@ -32,7 +32,6 @@ jobs:
         with:
           node-version: lts/*
           cache: "npm"
-          # Fixed: Pointing forward/downward into the workspace repo structure
           cache-dependency-path: "html-css/prism-js/github-actions/v1/package-lock.json"
 
       - name: Install dependencies
