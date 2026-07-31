@@ -23,7 +23,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "index.html",
-        htmlGuide: "v1/pages/html.html",
+        htmlGuide: "pages/html.html",
       },
     },
   },
