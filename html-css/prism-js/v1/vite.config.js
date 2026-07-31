@@ -20,5 +20,11 @@ export default defineConfig({
   base: "/mini-web-projects/html-css/prism-js/v1/dist/",
   build: {
     outDir: "dist",
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "index.html"),
+        htmlGuide: resolve(__dirname, "v1/html.html"), // Add all your HTML sub-pages here
+      },
+    },
   },
 });
