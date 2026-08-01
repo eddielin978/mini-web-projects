@@ -1,0 +1,35 @@
+h1 {
+  font-weight: 800;
+  margin-top: 0.5rem;
+  margin-bottom: 0.4rem;
+  font-size: clamp(1.8rem, 5vw, 2.3rem);
+}
+h2 {
+  font-weight: 600;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+  font-size: clamp(1.6rem, 4vw, 2rem);
+}
+h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+  font-size: clamp(1.4rem, 3.5vw, 1.7rem);
+  font-weight: 500;
+}
+h4 {
+  font-weight: 500;
+  margin-top: 0.5rem;
+  margin-bottom: 0.1rem;
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+}
+p,
+a,
+span,
+li {
+  font-weight: 400;
+  font-size: clamp(1.1rem, 3vw, 1.2rem);
+  text-decoration: none;
+}
+.bold {
+  font-weight: 600;
+}

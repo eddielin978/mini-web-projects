@@ -1,0 +1,9 @@
+.back-button {
+  padding: 0.5rem;
+  border: 0.2rem solid hsl(0, 0%, 20%);
+  border-radius: 0.5rem;
+  background-color: hsl(0, 0%, 80%);
+  color: black;
+  text-decoration: none;
+  margin: 1rem 0;
+}
