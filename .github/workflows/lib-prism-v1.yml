@@ -1,11 +1,11 @@
-name: Compile Monorepo Vite Apps
+name: Prism JS Experiment V1 vite app to Github Pages
 
 on:
   push:
     branches: ["main"]
     paths:
-      - "html-css/prism-js/v1/**"
-      - "!html-css/prism-js/v1/dist/**"
+      - "library-pkg/prism-js/v1/**"
+      - "!library-pkg/prism-js/v1/dist/**"
   workflow_dispatch:
 
 permissions:
@@ -24,19 +24,19 @@ jobs:
         with:
           node-version: lts/*
           cache: "npm"
-          cache-dependency-path: "html-css/prism-js/v1/package-lock.json"
+          cache-dependency-path: "library-pkg/prism-js/v1/package-lock.json"
 
       - name: Install and Build Vite App
         run: |
           npm ci
           npm run build
-        working-directory: html-css/prism-js/v1
+        working-directory: library-pkg/prism-js/v1
 
       - name: Commit and Push Built Files
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "automated production build [skip ci]"
-          file_pattern: "html-css/prism-js/v1/dist/**"
+          file_pattern: "library-pkg/prism-js/v1/dist/**"
           add_options: "--force"
           skip_dirty_check: false
           disable_globbing: false

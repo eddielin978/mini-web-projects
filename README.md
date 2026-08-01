@@ -13,6 +13,6 @@ This is a collection of some mini web-related projects that I've made.
 
 ### Local Storage Experiment V1
 
-[View Project](https://eddielin978.github.io/mini-web-projects/state/localstorage/v1/index.html)
+[View Project](https://eddielin978.github.io/mini-web-projects/apis/localstorage/v1/index.html)
 
 - Set your name and refresh the page. Your name will still be there!
