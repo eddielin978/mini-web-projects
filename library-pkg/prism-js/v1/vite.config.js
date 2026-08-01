@@ -17,7 +17,7 @@ export default defineConfig({
       css: true,
     }),
   ],
-  base: "/mini-web-projects/html-css/prism-js/v1/dist/",
+  base: "/mini-web-projects/library-pkg/prism-js/v1/dist/",
   build: {
     outDir: "dist",
     rollupOptions: {
