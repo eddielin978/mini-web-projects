@@ -3,24 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Guide</title>
+    <title>Javascript Guide</title>
     <script defer type="module" src="/scripts/global-styles.js"></script>
   </head>
-  <body class="language-css">
+  <body class="language-js">
     <div id="app">
-      <h1>CSS with Prism</h1>
+      <h1>Javascript with Prism</h1>
       <a href="../index.html" class="back-button">Back to Home</a>
       <h2>Sample Code</h2>
       <pre>
     <code>
-body {
-  background-color: hsl(200, 75%, 85%);
+const msg = "Hello World!";
+function sendMessage() {
+  console.log(msg);
 }
   </code>
 </pre>
-      <h2>Useful selectors</h2>
+      <h2>Console logging</h2>
       <ul>
-        <h3>Tag selectors</h3>
+        <li>Console.log: <code>console.log("Hi!");</code></li>
+        <li>Console.warn: <code>console.warn("Warning");</code></li>
       </ul>
     </div>
   </body>

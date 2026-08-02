@@ -1,3 +1,6 @@
 :root {
   --primary-html-accent: hsl(10, 60%, 60%);
+  --primary-js-accent: hsl(30, 70%, 70%);
+  --secondary-js-accent: hsl(50, 70%, 70%);
+  --tertiary-js-accent: hsl(80, 30%, 80%);
 }

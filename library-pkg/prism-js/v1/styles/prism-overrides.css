@@ -1,3 +1,16 @@
-.language-html .tag {
+pre[class*="language-"],
+code[class*="language-"] {
+  font-size: 1.2rem;
+}
+.language-html .token.tag {
   color: var(--primary-html-accent);
+}
+.language-js .token.keyword {
+  color: var(--primary-js-accent);
+}
+.language-js .token.function {
+  color: var(--secondary-js-accent);
+}
+.language-js :is(.token.operator, .token.number, .token.boolean, .token.string) {
+  color: var(--tertiary-js-accent);
 }

@@ -24,6 +24,8 @@ export default defineConfig({
       input: {
         main: "index.html",
         htmlGuide: "pages/html.html",
+        cssGuide: "pages/css.html",
+        jsGuide: "pages/js.html",
       },
     },
   },
