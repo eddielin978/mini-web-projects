@@ -14,3 +14,12 @@ code[class*="language-"] {
 .language-js :is(.token.operator, .token.number, .token.boolean, .token.string) {
   color: var(--tertiary-js-accent);
 }
+.language-java .token.keyword {
+  color: var(--primary-java-accent);
+}
+.language-java :is(.token.function) {
+  color: var(--secondary-java-accent);
+}
+.language-java :is(.token.operator, .token.number, .token.boolean, .token.string) {
+  color: var(--tertiary-java-accent);
+}

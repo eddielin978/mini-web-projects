@@ -11,7 +11,7 @@ export default defineConfig({
       },
     }),
     prismjsPlugin({
-      languages: ["javascript", "css", "markup"],
+      languages: ["javascript", "css", "markup", "java"],
       plugins: ["line-numbers"],
       theme: "tomorrow",
       css: true,
@@ -26,6 +26,7 @@ export default defineConfig({
         htmlGuide: "pages/html.html",
         cssGuide: "pages/css.html",
         jsGuide: "pages/js.html",
+        javaGuide: "pages/java.html",
       },
     },
   },

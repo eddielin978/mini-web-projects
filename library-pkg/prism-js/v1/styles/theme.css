@@ -3,4 +3,7 @@
   --primary-js-accent: hsl(30, 70%, 70%);
   --secondary-js-accent: hsl(50, 70%, 70%);
   --tertiary-js-accent: hsl(80, 30%, 80%);
+  --primary-java-accent: hsl(0, 70%, 70%);
+  --secondary-java-accent: hsl(210, 70%, 70%);
+  --tertiary-java-accent: hsl(200, 30%, 80%);
 }
