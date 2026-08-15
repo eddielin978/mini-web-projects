@@ -1,6 +1,7 @@
 // Query Selectors
 const healthText = document.querySelector(".health-text");
 const healthBar = document.querySelector(".bar");
+const healthContainer = document.querySelector(".bar-container");
 
 // Variable initialization
 let health = 100;
@@ -11,8 +12,9 @@ const updateText = () => {
 };
 
 // Event listeners
-healthBar.addEventListener("click", () => {
+healthContainer.addEventListener("click", () => {
   health -= 5;
+  if (health < 0) health = 0;
   healthBar.style.width = `${health}%`;
   updateText();
 });
