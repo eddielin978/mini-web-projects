@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100dvh;
+  max-width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.chest-btn {
+  padding: 1rem;
+  background-color: hsl(40, 60%, 80%);
+  border: 0.2rem solid hsl(0, 0%, 20%);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.result-txt {
+  font-size: 1.2rem;
+}
