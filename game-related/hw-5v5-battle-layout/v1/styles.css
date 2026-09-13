@@ -34,7 +34,6 @@
     bottom: 2rem;
     margin-left: 50dvw;
     transform: translateX(-50%);
-    background-color: var(--green-rank-color);
   }
 }
 
@@ -43,6 +42,10 @@
     width: 100%;
     height: 100dvh;
     background-color: hsl(50, 50%, 80%);
+    h1 {
+      text-align: center;
+      padding-top: 4rem;
+    }
   }
   .hero {
     width: 4rem;
@@ -104,9 +107,13 @@
     }
   }
   .hero-card {
-    width: 4rem;
+    width: 5rem;
     aspect-ratio: 3/4;
     border: 0.5rem solid hsl(0, 0%, 60%);
     border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
   }
 }
