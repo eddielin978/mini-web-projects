@@ -125,20 +125,21 @@
       bottom: 0.2rem;
       border-radius: 0.2rem;
     }
+    --rank-shadow: 0 0 0 0 transparent;
+    --energy-shadow: 0 0 0 0 transparent;
     &.full-energy {
-      box-shadow: 0 0 0 0.6rem var(--energy-color);
+      --energy-shadow: 0 0 0.4rem 0.7rem var(--energy-color);
       cursor: pointer;
     }
     &.grey {
-      box-shadow: 0 0 0 0.5rem var(--grey-rank-color);
+      --rank-shadow: 0 0 0 0.5rem var(--grey-rank-color);
     }
     &.green {
-      box-shadow: 0 0 0 0.5rem var(--green-rank-color);
+      --rank-shadow: 0 0 0 0.5rem var(--green-rank-color);
     }
     &.green1 {
-      box-shadow:
-        0 0 0 0.25rem var(--grey-rank-color),
-        0 0 0 0.5rem var(--green-rank-color);
+      --rank-shadow: 0 0 0 0.25rem var(--grey-rank-color), 0 0 0 0.5rem var(--green-rank-color);
     }
+    box-shadow: var(--rank-shadow), var(--energy-shadow);
   }
 }
