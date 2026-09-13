@@ -4,6 +4,14 @@
   --grey-rank-color: hsl(0, 0%, 60%);
   --green-rank-color: hsl(100, 40%, 50%);
   --blue-rank-color: hsl(210, 40%, 50%);
+  --energy-color: hsl(50, 60%, 60%);
+  --xpos-1: 14%;
+  --xpos-2: 21%;
+  --xpos-3: 28%;
+  --xpos-4: 35%;
+  --xpos-5: 42%;
+  --ypos-up: 30%;
+  --ypos-down: 45%;
 }
 
 @layer reset {
@@ -20,6 +28,7 @@
     min-height: 100dvh;
     min-width: 100%;
     position: relative;
+    user-select: none;
   }
 }
 
@@ -29,7 +38,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     position: absolute;
     bottom: 3rem;
     margin-left: 50dvw;
@@ -55,65 +64,58 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    font-size: 1.5rem;
     &.hero1 {
-      position: absolute;
-      left: 18%;
-      top: 40%;
+      left: var(--xpos-1);
+      top: var(--ypos-up);
     }
     &.hero2 {
-      position: absolute;
-      left: 24%;
-      top: 50%;
+      left: var(--xpos-2);
+      top: var(--ypos-down);
     }
     &.hero3 {
-      position: absolute;
-      left: 30%;
-      top: 40%;
+      left: var(--xpos-3);
+      top: var(--ypos-up);
     }
     &.hero4 {
-      position: absolute;
-      left: 36%;
-      top: 50%;
+      left: var(--xpos-4);
+      top: var(--ypos-down);
     }
     &.hero5 {
-      position: absolute;
-      left: 42%;
-      top: 40%;
+      left: var(--xpos-5);
+      top: var(--ypos-up);
     }
     &.hero6 {
-      position: absolute;
-      left: 58%;
-      top: 40%;
+      right: var(--xpos-5);
+      top: var(--ypos-up);
     }
     &.hero7 {
-      position: absolute;
-      left: 64%;
-      top: 50%;
+      right: var(--xpos-4);
+      top: var(--ypos-down);
     }
     &.hero8 {
-      position: absolute;
-      left: 70%;
-      top: 40%;
+      right: var(--xpos-3);
+      top: var(--ypos-up);
     }
     &.hero9 {
-      position: absolute;
-      left: 76%;
-      top: 50%;
+      right: var(--xpos-2);
+      top: var(--ypos-down);
     }
     &.hero10 {
-      position: absolute;
-      left: 82%;
-      top: 40%;
+      right: var(--xpos-1);
+      top: var(--ypos-up);
     }
   }
   .hero-card {
     width: 5rem;
     aspect-ratio: 3/4;
-    border: 0.5rem solid hsl(0, 0%, 60%);
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
+    user-select: none;
+    position: relative;
   }
 }
