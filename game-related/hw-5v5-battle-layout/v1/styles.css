@@ -1,0 +1,62 @@
+@layer reset, base, layout, components, utilities;
+
+:root {
+  --grey-rank-color: hsl(0, 0%, 60%);
+  --green-rank-color: hsl(100, 40%, 50%);
+  --blue-rank-color: hsl(210, 40%, 50%);
+}
+
+@layer reset {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    min-width: 100dvw;
+    min-height: 100dvh;
+  }
+  #app {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+}
+
+@layer layout {
+  .card-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    bottom: 2rem;
+    margin-left: 50dvw;
+    transform: translateX(-50%);
+    background-color: var(--green-rank-color);
+  }
+}
+
+@layer components {
+  .battle-screen {
+    width: 100%;
+    height: 100%;
+    background-color: hsl(50, 50%, 80%);
+  }
+  .hero {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 80%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-card {
+    width: 4rem;
+    aspect-ratio: 3/4;
+    border: 0.5rem solid hsl(0, 0%, 60%);
+    border-radius: 1rem;
+  }
+}
