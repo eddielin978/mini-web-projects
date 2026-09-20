@@ -12,6 +12,7 @@
   #app {
     width: 100dvw;
     height: 100dvh;
+    background-color: hsl(0, 0%, 30%);
   }
   .hero-level-screen {
     width: 80vw;
@@ -31,10 +32,11 @@
         display: flex;
         flex-direction: column;
         .sidebar-item {
-          padding: 0.5rem;
+          padding: 1rem;
           background-color: hsl(40, 90%, 90%);
           border: 0.2rem solid hsl(30, 40%, 40%);
           border-radius: 0.2rem;
+          font-size: 1.2rem;
         }
       }
       .skills {
@@ -64,6 +66,9 @@
             flex-direction: column;
             gap: 0.5rem;
             padding: 0.5rem;
+            .skill-name {
+              font-size: 1.2rem;
+            }
           }
           .skill-plus {
             margin-top: 1.5rem;
@@ -99,6 +104,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          font-size: 3rem;
         }
       }
       .bottom-right {
@@ -119,6 +125,7 @@
           background-color: hsl(40, 80%, 80%);
           border: 0.2rem solid hsl(30, 40%, 40%);
           border-radius: 0.2rem;
+          font-size: 1.2rem;
         }
         .power-icon {
           margin-top: 1.5rem;
@@ -134,5 +141,13 @@
         }
       }
     }
+  }
+}
+
+@layer components {
+  h1 {
+    text-align: center;
+    padding: 1rem;
+    color: hsl(0, 0%, 90%);
   }
 }
