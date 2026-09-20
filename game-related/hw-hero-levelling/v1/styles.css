@@ -63,6 +63,7 @@
             flex: 1;
             flex-direction: column;
             gap: 0.5rem;
+            padding: 0.5rem;
           }
           .skill-plus {
             margin-top: 1.5rem;
@@ -83,7 +84,7 @@
       border-radius: 1rem;
       .sprite-area {
         width: 100%;
-        aspect-ratio: 3/2;
+        aspect-ratio: 4/3;
         background-color: hsl(40, 80%, 80%);
         border: 0.2rem solid hsl(30, 40%, 40%);
         border-radius: 0.2rem;
@@ -120,14 +121,16 @@
           border-radius: 0.2rem;
         }
         .power-icon {
-          margin-top: 2rem;
+          margin-top: 1.5rem;
           height: 40%;
           aspect-ratio: 1/1;
           background-color: hsl(260, 60%, 60%);
         }
         .power-stat {
-          margin-top: 2rem;
+          margin-top: 1.5rem;
           height: 40%;
+          display: flex;
+          align-items: center;
         }
       }
     }
