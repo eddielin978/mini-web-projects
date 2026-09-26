@@ -1,0 +1,35 @@
+@layer reset, layout, components;
+
+@layer reset {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    min-width: 100dvw;
+    min-height: 100dvh;
+  }
+}
+
+@layer layout {
+  #app {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+}
+
+@layer components {
+  h1 {
+    margin: 1rem 0;
+  }
+  .row button {
+    padding: 0.5rem;
+  }
+}
