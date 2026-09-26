@@ -32,4 +32,10 @@
   .row button {
     padding: 0.5rem;
   }
+  .list {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }

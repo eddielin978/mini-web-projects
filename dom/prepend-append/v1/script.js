@@ -6,6 +6,7 @@ const list = document.querySelector(".list");
 
 let totalItems = 0;
 
+// Event listeners
 prependBtn.addEventListener("click", () => {
   const listItem = document.createElement("li");
   listItem.textContent = `Item ${++totalItems}`;
